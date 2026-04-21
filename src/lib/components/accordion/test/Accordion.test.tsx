@@ -15,6 +15,8 @@ describe('Accordion', () => {
     render(<Accordion panels={panels}/>);  
     const buttons = screen.getAllByRole('button');  
     expect(buttons).toHaveLength(3);  
+
+    //disabled toBeNull, as text was still recognized even though hidden
     // expect(screen.queryByText('Content for panel one')).toBeNull();  
     // expect(screen.queryByText('Content for panel two')).toBeNull();  
     // expect(screen.queryByText('Content for panel three')).toBeNull();  
@@ -27,6 +29,7 @@ describe('Accordion', () => {
     const { user } = renderWithUser(<Accordion panels={panels}/>);  
     const buttons = screen.getAllByRole('button');  
     await user.click(buttons[1]);  
+
     // expect(screen.getByText('Content for panel two')).toBeVisible();  
     // expect(screen.queryByText('Content for panel one')).toBeNull();  
     // expect(screen.queryByText('Content for panel three')).toBeNull();  
