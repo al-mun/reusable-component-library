@@ -44,4 +44,5 @@ Testing is done through Vitest, React Testing Library, and Jest
 
 Run this command to start testing. 
 ```bash 
-npx vitest```
+npx vitest
+```
